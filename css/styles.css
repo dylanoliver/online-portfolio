@@ -1,0 +1,380 @@
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Courier', sans-serif;
+	background: url('../img/crossword.png') repeat center center fixed;
+	background-size: cover;
+	/*background: rgba(128,208,240,0.1);*/
+}
+
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.main-header,
+.nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.main-header {
+	padding-top: 2em;
+}
+
+.main-header h1 {
+	-ms-flex-item-align: center;
+	    -ms-grid-row-align: center;
+	    align-self: center;
+	letter-spacing: .15em;
+	font-weight: 600;
+	text-transform: lowercase;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.nav {
+	margin-top: 1.5em;
+}
+
+.nav a {
+	text-decoration: none;
+	text-transform: lowercase;
+	color: #000;
+	display: block;
+	font-size: 1.125em;
+	font-weight: 300;
+	text-align: center;
+	padding: .4em;
+}
+
+.nav a:hover {
+	color: #0b0b0b;
+	font-weight: bold;
+}
+
+.polaroid-images {
+	width: 100%;
+	margin-top: 2.5em;
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.polaroid-images a {
+	background: white;
+	display: inline;
+	float: left;
+	margin: 0 15px 30px;
+	padding: 10px 20px 25px;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 0 4px 6px rgba(0,0,0,.3);
+	-webkit-transition: all .25s linear;
+	transition: all .25s linear;
+	z-index: 0;
+	position: relative;
+}
+
+/* Add caption on to the image */
+.polaroid-images a:after {
+	color: #333;
+	font-size: 20px;
+	content: attr(title);
+	position: relative;
+	top: 15px;
+}
+
+/* Ensure that image will always fit the polaroid area*/
+.polaroid-images img {
+	display: block;
+	width: inherit;%;
+}
+
+.responsive-image {
+	max-width :100%;
+}
+
+/* Random rotations */
+.polaroid-images a:first-child {
+	transform: rotate(-4deg);
+	-moz-transform: rotate(-4deg);
+	-webkit-transform: rotate(-4deg);
+}
+
+.polaroid-images a:nth-child(2n) {
+	transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-webkit-transform: rotate(2deg);
+}
+
+.polaroid-images a:nth-child(3n) {
+	transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+	-webkit-transform: rotate(-20deg);
+}
+
+.polaroid-images a:nth-child(4n) {
+	transform: rotate(14deg);
+	-moz-transform: rotate(14deg);
+	-webkit-transform: rotate(14deg);
+}
+
+.polaroid-images a:nth-child(5n) {
+	transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+}
+
+/* Scale on hover */
+.polaroid-images a:hover {
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	z-index: 10;
+	box-shadow: 0 10px 20px rgba(0,0,0,.7);
+}
+
+
+.social {
+	margin-top: 3.75em;
+	margin-bottom: 2em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	    flex-flow: row wrap;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+}
+
+.social p {
+	margin-top: 5px;
+}
+
+.social svg {
+	height: 32px;
+	width: 32px;
+	-webkit-transition: .8s ease-out;
+	transition: .8s ease-out;
+}
+
+.social svg:hover {
+	-webkit-transform: rotate(360deg) scale(1.2);
+	        transform: rotate(360deg) scale(1.2);
+}
+
+.info-icon {
+	height: 32px;
+	width: 32px;
+}
+
+.about {
+	margin-top: 2em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.about img,
+.about p {
+	margin: auto;
+}
+
+.about img {
+	max-width: 100%;
+}
+
+.about p {
+	margin-top: 2em;
+	text-align: center;
+	width: 60%;
+}
+
+.form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+
+
+form {
+	max-width: 500px;
+	margin: 0px auto 10px;
+	padding: 0px 20px 10px;
+	text-transform: lowercase;
+}
+
+fieldset {
+	border: none;
+}
+
+legend {
+	font-size: 1.4em;
+	font-weight: bold;
+	padding-top: 18px;
+	margin-bottom: 25px;
+	text-align: left;
+}
+
+label {
+	display: block;
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+input,
+select
+{
+	width: 100%;
+	padding: 10px;
+	background-color: #e8eeef;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	border: none;
+	height: 50px;
+}
+
+
+::-webkit-input-placeholder {
+	text-align: right;
+	text-transform: capitalize;
+	font-style: italic;
+	padding-right: 20px;
+}
+
+::-moz-placeholder {
+	text-align: right;
+	text-transform: capitalize;
+	font-style: italic;
+	padding-right: 20px;
+}
+
+::-ms-input-placeholder {
+	text-align: right;
+	text-transform: capitalize;
+	font-style: italic;
+	padding-right: 20px;
+}
+
+::-moz-input-placeholder {
+	text-align: right;
+	text-transform: capitalize;
+	font-style: italic;
+	padding-right: 20px;
+}
+
+button {
+	width: 100%;
+	margin-top: 1em;
+	color: #fff;
+	background-color: #000;
+	border-radius: 8px;
+	padding: 10px 0;
+	font-size: 1.75em;
+	border: none;
+}
+
+
+/***********************
+	Media Queries
+***********************/
+
+@media (min-width: 769px){
+
+	.wrapper {
+		width: 80%;
+	}
+	.main-header {
+		height: 200px;
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+		padding-top: 0;
+	}
+
+	h1 {
+		text-align: center;
+		width: 300px
+	}
+
+	.nav {
+		margin-top: 1em;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+
+	.social {
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+	}
+
+	.social svg {
+		margin-left: 1em;
+	}
+
+	.copy {
+		margin-right: auto;
+		-ms-flex-item-align: start;
+		    align-self: flex-start;
+	}
+}
+
+@media (min-width: 1025px) {
+
+	.wrapper {
+		width: 90%;
+		max-width: 1400px;
+	}
+
+	.main-header {
+		height: 100px;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+	}
+	h1 {
+		margin-right: auto;
+	}
+	.nav {
+		margin-top: 0;
+		-ms-flex-item-align: center;
+		    -ms-grid-row-align: center;
+		    align-self: center;
+	}
+	.nav li {
+		margin-left: .65em;
+		margin-right: .65em;
+	}
+
+}
